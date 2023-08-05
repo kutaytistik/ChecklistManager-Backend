@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Business\Concrete\" />
+    <Folder Include="Business\Abstract\" />
+    <Folder Include="ConsoleUI\" />
+    <Folder Include="DataAccess\Concrete\EntityFramework\" />
+  </ItemGroup>
+
+</Project>
