@@ -59,5 +59,12 @@ namespace API.Controllers
             _checklistService.Update(checklist);
             return Ok();
         }
+
+        [HttpPut("updatecheckbox")]
+        public IActionResult UpdateCheckbox(ChecklistItem item)
+        {
+            _checklistService.UpdateCheckbox(item);
+            return Ok();
+        }
     }
 }

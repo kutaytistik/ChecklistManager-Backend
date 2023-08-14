@@ -40,5 +40,10 @@ namespace Business.Concrete
         {
             _checklistDal.Update(checklist);
         }
+
+        public void UpdateCheckbox(ChecklistItem item)
+        {
+            _checklistDal.UpdateCheckbox(item);
+        }
     }
 }

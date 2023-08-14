@@ -13,21 +13,17 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class ChecklistManagerContext : DbContext
     {
-        public ChecklistManagerContext(DbContextOptions<ChecklistManagerContext> options):base(options)
+        public ChecklistManagerContext(DbContextOptions<ChecklistManagerContext> options) : base(options)
         {
-            
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //Lazy Loading'i etkinleştiren satır
-            //.net 5 ten sonra propertyleri virtual olarak etiketlemek yeterli oluyormuş ama çalışmadı 
-            //Gerekli paketler yüklendi
-            //propları virtual olarak işaretledim
 
-            optionsBuilder.UseLazyLoadingProxies().UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=ChecklistManagerDb;Trusted_Connection=True");
+            optionsBuilder.UseLazyLoadingProxies();
 
-            
+
         }
 
 

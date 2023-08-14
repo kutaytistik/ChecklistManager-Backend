@@ -9,6 +9,6 @@ namespace DataAccess.Abstract
 {
     public interface ITemplateDal:IEntityRepository<Template>
     {
-
+        void UpdateCheckbox(ChecklistItem item);
     }
 }

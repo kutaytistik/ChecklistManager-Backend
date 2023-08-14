@@ -50,9 +50,7 @@ namespace DataAccess.Concrete.EntityFramework
 
         public Checklist GetById(Expression<Func<Checklist, bool>> filter)
         {
-
             return _checklistManagerContext.Set<Checklist>().SingleOrDefault(filter);
-
         }
 
         public void Update(Checklist entity)
@@ -62,6 +60,13 @@ namespace DataAccess.Concrete.EntityFramework
             updatedEntity.State = EntityState.Modified;
             _checklistManagerContext.SaveChanges();
 
+        }
+
+        public void UpdateCheckbox(ChecklistItem item)
+        {
+            var existingItem = _checklistManagerContext.Entry(item);
+            existingItem.Property(x => x.IsCompleted).IsModified = true;
+            _checklistManagerContext.SaveChanges();
         }
     }
 }

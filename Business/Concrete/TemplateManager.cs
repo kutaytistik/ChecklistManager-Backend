@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
+using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,11 @@ namespace Business.Concrete
         public void Update(Template template)
         {
             _templateDal.Update(template);
+        }
+
+        public void UpdateCheckbox(ChecklistItem item)
+        {
+            _templateDal.UpdateCheckbox(item);
         }
     }
 }

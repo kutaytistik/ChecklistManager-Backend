@@ -16,5 +16,7 @@ namespace Business.Abstract
         void Add(Template template);
         void Update(Template template);
         void Delete(Template template);
+
+        void UpdateCheckbox(ChecklistItem item);
     }
 }

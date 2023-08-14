@@ -17,7 +17,7 @@ namespace Entities.Concrete
         public bool IsCompleted { get; set; } = false;
         public int? ChecklistId { get; set; }
         public int? TemplateId { get; set; }
-        public  virtual Template? Template { get; set; }
+        public virtual Template? Template { get; set; }
         public virtual Checklist? Checklist { get; set; }
 
     }

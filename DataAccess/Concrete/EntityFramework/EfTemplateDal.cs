@@ -62,5 +62,12 @@ namespace DataAccess.Concrete.EntityFramework
             _checklistManagerContext.SaveChanges();
 
         }
+
+        public void UpdateCheckbox(ChecklistItem item)
+        {
+            var existingItem = _checklistManagerContext.Entry(item);
+            existingItem.Property(x => x.IsCompleted).IsModified = true;
+            _checklistManagerContext.SaveChanges();
+        }
     }
 }

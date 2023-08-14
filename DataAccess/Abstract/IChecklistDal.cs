@@ -10,6 +10,6 @@ namespace DataAccess.Abstract
 {
     public interface IChecklistDal : IEntityRepository<Checklist>
     {
-
+        void UpdateCheckbox(ChecklistItem item);
     }
 }
