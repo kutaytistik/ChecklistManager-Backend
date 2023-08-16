@@ -14,6 +14,7 @@ namespace DataAccess.Concrete.EntityFramework
     public class EfTemplateDal : ITemplateDal
     {
         ChecklistManagerContext _checklistManagerContext;
+        IChecklistItemDal _checklistItemDal;
         
         public EfTemplateDal(ChecklistManagerContext checklistManagerContext)
         {
@@ -22,7 +23,7 @@ namespace DataAccess.Concrete.EntityFramework
         public void Add(Template entity)
         {
 
-            var addedEntity = _checklistManagerContext.Entry(entity);
+            var addedEntity = _checklistManagerContext.Add<Template>(entity);
             addedEntity.State = EntityState.Added;
             _checklistManagerContext.SaveChanges();
 

@@ -23,7 +23,7 @@ namespace DataAccess.Concrete.EntityFramework
         public void Add(Checklist entity)
         {
 
-            var addedEntity = _checklistManagerContext.Entry(entity);
+            var addedEntity = _checklistManagerContext.Add<Checklist>(entity);
             addedEntity.State = EntityState.Added;
             _checklistManagerContext.SaveChanges();
 

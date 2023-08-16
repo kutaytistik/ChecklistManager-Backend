@@ -15,8 +15,8 @@ namespace Entities.Concrete
         [Key]
         public int ChecklistId { get; set; }
         public string Title { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime? UpdatedAt { get; set; }
         public  virtual List<ChecklistItem>? Items { get; set; }
 
     }

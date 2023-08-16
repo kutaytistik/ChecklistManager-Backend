@@ -39,7 +39,6 @@ namespace API.Controllers
         [HttpPost("add")]
         public IActionResult Add(Template template)
         {
-
             _templateService.Add(template);
             return Ok();
 
